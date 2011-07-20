@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* ios_frameworkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* ios_frameworkAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -15,9 +14,9 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		39777DE713D65FDB0042B928 /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DE613D65FDB0042B928 /* Collection.m */; };
 		398B31E813D6558600D543D4 /* BindableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B314D13D6558600D543D4 /* BindableObject.m */; };
 		398B31E913D6558600D543D4 /* Callback.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B314F13D6558600D543D4 /* Callback.m */; };
-		398B31EA13D6558600D543D4 /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B315113D6558600D543D4 /* Collection.m */; };
 		398B31EB13D6558600D543D4 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B315313D6558600D543D4 /* Constants.m */; };
 		398B31EC13D6558600D543D4 /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B315513D6558600D543D4 /* Context.m */; };
 		398B31ED13D6558600D543D4 /* Evaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B315713D6558600D543D4 /* Evaluator.m */; };
@@ -95,7 +94,6 @@
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* ios_frameworkAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ios_frameworkAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* ios_frameworkAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ios_frameworkAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* ios-framework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-framework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,12 +102,12 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ios_framework_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ios_framework_Prefix.pch; sourceTree = "<group>"; };
+		39777DE513D65FDB0042B928 /* Collection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collection.h; sourceTree = "<group>"; };
+		39777DE613D65FDB0042B928 /* Collection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collection.m; sourceTree = "<group>"; };
 		398B314C13D6558600D543D4 /* BindableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindableObject.h; sourceTree = "<group>"; };
 		398B314D13D6558600D543D4 /* BindableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindableObject.m; sourceTree = "<group>"; };
 		398B314E13D6558600D543D4 /* Callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Callback.h; sourceTree = "<group>"; };
 		398B314F13D6558600D543D4 /* Callback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Callback.m; sourceTree = "<group>"; };
-		398B315013D6558600D543D4 /* Collection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collection.h; sourceTree = "<group>"; };
-		398B315113D6558600D543D4 /* Collection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collection.m; sourceTree = "<group>"; };
 		398B315213D6558600D543D4 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		398B315313D6558600D543D4 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		398B315413D6558600D543D4 /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
@@ -280,7 +278,6 @@
 				398B31AB13D6558600D543D4 /* Temp */,
 				398B31B513D6558600D543D4 /* Widget */,
 				1D3623240D0F684500981E51 /* ios_frameworkAppDelegate.h */,
-				1D3623250D0F684500981E51 /* ios_frameworkAppDelegate.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -344,8 +341,6 @@
 				398B314D13D6558600D543D4 /* BindableObject.m */,
 				398B314E13D6558600D543D4 /* Callback.h */,
 				398B314F13D6558600D543D4 /* Callback.m */,
-				398B315013D6558600D543D4 /* Collection.h */,
-				398B315113D6558600D543D4 /* Collection.m */,
 				398B315213D6558600D543D4 /* Constants.h */,
 				398B315313D6558600D543D4 /* Constants.m */,
 				398B315413D6558600D543D4 /* Context.h */,
@@ -393,6 +388,8 @@
 		398B316E13D6558600D543D4 /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				39777DE513D65FDB0042B928 /* Collection.h */,
+				39777DE613D65FDB0042B928 /* Collection.m */,
 				398B316F13D6558600D543D4 /* Array.h */,
 				398B317013D6558600D543D4 /* Array.m */,
 				398B317113D6558600D543D4 /* Bool.h */,
@@ -599,11 +596,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* ios_frameworkAppDelegate.m in Sources */,
 				28193055112F811F00ECF9B4 /* ios_framework.xcdatamodeld in Sources */,
 				398B31E813D6558600D543D4 /* BindableObject.m in Sources */,
 				398B31E913D6558600D543D4 /* Callback.m in Sources */,
-				398B31EA13D6558600D543D4 /* Collection.m in Sources */,
 				398B31EB13D6558600D543D4 /* Constants.m in Sources */,
 				398B31EC13D6558600D543D4 /* Context.m in Sources */,
 				398B31ED13D6558600D543D4 /* Evaluator.m in Sources */,
@@ -675,6 +670,7 @@
 				398B323013D6558600D543D4 /* iTimePicker.m in Sources */,
 				398B323113D6558600D543D4 /* iView.m in Sources */,
 				398B323213D6558600D543D4 /* iWhen.m in Sources */,
+				39777DE713D65FDB0042B928 /* Collection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

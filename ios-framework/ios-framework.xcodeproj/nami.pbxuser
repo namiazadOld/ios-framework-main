@@ -1,6 +1,12 @@
 // !$*UTF8*$!
 {
 	1D3623250D0F684500981E51 /* ios_frameworkAppDelegate.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = ios_frameworkAppDelegate.m;
+		path = "/Users/nami/Documents/master-thesis/trunk/ios-framework/Classes/ios_frameworkAppDelegate.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1965, 2665}}";
 			sepNavSelRange = "{974, 0}";
