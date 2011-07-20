@@ -7,6 +7,7 @@
 //
 
 #import "Array.h"
+#import "Num.h";
 
 
 @implementation Array
@@ -15,12 +16,13 @@
 -(Array*) init
 {
 	data = [[NSMutableArray alloc] init];
-	_length = [[BindableObject alloc] initWithNumber:0];
+	_length = [[BindableObject alloc] initializeWithValue:[[Num alloc] initWithNumber:0]];
+	return self;
 }
 
 -(BindableObject*) length
 {
-	[_length setNumValue:[data count]];
+	[(Num*)[_length value] setValue:[data count]];
 	return _length;
 }
 

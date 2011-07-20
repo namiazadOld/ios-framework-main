@@ -14,7 +14,7 @@
 #import "BindableObject.h"
 #import "Object.h"
 #import "NameValue.h"
-#import "TypedValue.h"
+
 #import "DateTime.h"
 #import "Evaluator.h"
 #import "iWhen.h"

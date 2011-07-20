@@ -38,7 +38,6 @@
 	if (n == nil)
 		return nil;
 	Num* num = [[Num alloc] initWithNumber:[n floatValue]];
-	[n release];
 	return num;
 }
 
