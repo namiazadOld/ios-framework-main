@@ -13,34 +13,38 @@
 @synthesize number, numberBindableObject;
 
 //Properties Wrappers 
--(float) number
+-(Num*) number
 {
-	NSNumber* n = [self getNumberFromText];
+	Num* n = [self getNumberFromText];
 	if (n == nil)
-		return 0.0;
-	return [n floatValue];
+		return [[Num alloc] initWithNumber:0.0];
+	return n;
 }
 
--(void)setNumber:(float)aNumber
+-(void)setNumber:(Num*)aNumber
 {
 	@synchronized(self)
 	{
-		self.textBox.text = [[NSNumber numberWithFloat:aNumber] stringValue];
+		self.textBox.text = [[NSNumber numberWithFloat:aNumber.value] stringValue];
 	}
 }
 
--(NSNumber*) getNumberFromText  
+-(Num*) getNumberFromText  
 {
 	NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
 	[f setNumberStyle:NSNumberFormatterDecimalStyle];
 	NSNumber *n = [f numberFromString:self.textBox.text];
 	[f release];
-	return n;
+	if (n == nil)
+		return nil;
+	Num* num = [[Num alloc] initWithNumber:[n floatValue]];
+	[n release];
+	return num;
 }
 
 -(void) textChangedHandler: (id)sender
 {
-	NSNumber* n = [self getNumberFromText];
+	Num* n = [self getNumberFromText];
 	if (n == nil)
 		self.textBox.textColor = [UIColor redColor];
 	else
@@ -59,11 +63,11 @@
 	if (!self.locked)
 	{
 		self.locked = YES;
-		NSNumber* currentValue = [self getNumberFromText];
+		Num* currentValue = [self getNumberFromText];
 		if (currentValue == nil)
-			[self.numberBindableObject setNumValue:0.0];
+			[self.numberBindableObject setValue:[[Num alloc] initWithNumber:0.0]];
 		else
-			[self.numberBindableObject setNumValue:[currentValue floatValue]];
+			[self.numberBindableObject setValue:currentValue];
 		
 		[self.placeholderBindableObject setValue:[self.textBox.placeholder retain]];
 		self.locked = NO;
@@ -76,7 +80,7 @@
 	{
 		self.locked = YES;
 		if ([bo isEqual:self.numberBindableObject])
-			self.textBox.text = [[NSNumber numberWithFloat:bo.numValue] stringValue];
+			[self setNumber:(Num*)bo.value];
 		else
 			self.textBox.placeholder = (NSString*) bo.value;
 		self.locked = NO;
@@ -90,7 +94,7 @@
 	switch (index) {
 		case 0:
 			self.numberBindableObject = bo;
-			self.textBox.text = [[NSNumber numberWithFloat:bo.numValue] stringValue];
+			[self setNumber: (Num*)bo.value];
 			break;
 		case 1:
 			self.placeholderBindableObject = bo;

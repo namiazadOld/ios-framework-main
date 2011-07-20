@@ -62,16 +62,15 @@ static NSManagedObjectContext* managedObjectContext;
 
 +(BindableObject*) InitWithType: (TypedValue*) tv
 {
-	if ([tv.type isEqualToString:NUM_TYPE])
-		return [[BindableObject alloc] initWithNumber:[tv.value floatValue]];
-
-	if ([tv.type isEqualToString:BOOL_TYPE])
-		return [[BindableObject alloc] initWithBool:[tv.value boolValue]];
-	
+	//if ([tv.type isEqualToString:NUM_TYPE])
+//		return [[BindableObject alloc] initWithNumber:[tv.value floatValue]];
+//
+//	if ([tv.type isEqualToString:BOOL_TYPE])
+//		return [[BindableObject alloc] initWithBool:[tv.value boolValue]];
+//	
 	if ([tv.value isKindOfClass:[BindableObject class]])
 		return tv.value;
-	
-	
+		
 	return [[BindableObject alloc] initWithValue:tv.value];
 }
 

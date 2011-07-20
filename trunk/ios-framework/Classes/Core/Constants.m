@@ -17,6 +17,3 @@ float	  const DEFAULT_X = -1;
 float	  const DEFAULT_Y = -1;
 float	  const DEFAULT_WIDTH = -1;
 float     const DEFAULT_HEIGHT = -1;
-NSString* const STRING_TYPE = @"String";
-NSString* const NUM_TYPE = @"Num";
-NSString* const BOOL_TYPE = @"Bool";

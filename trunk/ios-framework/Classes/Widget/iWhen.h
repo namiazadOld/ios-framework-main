@@ -10,6 +10,7 @@
 #import "iBaseControl.h"
 #import "BindableObject.h"
 #import "iCustomControl.h"
+#import "Bool.h"
 
 
 @interface iWhen : iCustomControl {
@@ -20,7 +21,7 @@
 
 @property (nonatomic, retain) iCustomControl* when;
 @property (nonatomic, retain) iCustomControl* elseWhen;
-@property (assign) BOOL condition;
+@property (nonatomic, retain) Bool* condition;
 @property (nonatomic, retain) BindableObject* conditionBindableObject;
 
 @end

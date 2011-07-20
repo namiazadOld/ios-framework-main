@@ -17,8 +17,6 @@ extern float	  const DEFAULT_X;
 extern float	  const DEFAULT_Y;
 extern float	  const DEFAULT_WIDTH;
 extern float      const DEFAULT_HEIGHT; 
-extern NSString*  const STRING_TYPE;
-extern NSString*  const NUM_TYPE;
-extern NSString*  const BOOL_TYPE;
+
 
 

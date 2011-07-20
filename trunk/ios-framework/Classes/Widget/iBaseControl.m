@@ -191,7 +191,12 @@
 	int i = 0;
 	for (BindableObject* bo in arguments)
 	{
-		if (bo.type == Null)
+		//if (bo.type == Null)
+//		{
+//			i++;
+//			continue;
+//		}
+		if ([bo.value isKindOfClass:[NullObject class]])
 		{
 			i++;
 			continue;

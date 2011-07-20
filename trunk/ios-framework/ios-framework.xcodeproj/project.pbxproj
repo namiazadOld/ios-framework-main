@@ -15,31 +15,17 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
 		39777DE713D65FDB0042B928 /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DE613D65FDB0042B928 /* Collection.m */; };
-		39777E0413D662920042B928 /* AppInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DEB13D662920042B928 /* AppInit.m */; };
-		39777E0513D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp12.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DED13D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp12.m */; };
-		39777E0613D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp14.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DEF13D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp14.m */; };
-		39777E0713D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DF113D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4.m */; };
-		39777E0813D662920042B928 /* ControlVariable_AddPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DF313D662920042B928 /* ControlVariable_AddPerson.m */; };
-		39777E0913D662920042B928 /* ControlVariable_nextlineTextBoxStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DF513D662920042B928 /* ControlVariable_nextlineTextBoxStyle.m */; };
-		39777E0A13D662920042B928 /* ControlVariable_Organization__Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DF713D662920042B928 /* ControlVariable_Organization__Description.m */; };
-		39777E0B13D662920042B928 /* ControlVariable_Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DF913D662920042B928 /* ControlVariable_Organization.m */; };
-		39777E0C13D662920042B928 /* ControlVariable_Person__Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DFB13D662920042B928 /* ControlVariable_Person__Description.m */; };
-		39777E0D13D662920042B928 /* ControlVariable_Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DFD13D662920042B928 /* ControlVariable_Person.m */; };
-		39777E0E13D662920042B928 /* ControlVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DFF13D662920042B928 /* ControlVariable.m */; };
-		39777E0F13D662920042B928 /* root_iHeader_ControlCall5_callback_tmp19.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777E0113D662920042B928 /* root_iHeader_ControlCall5_callback_tmp19.m */; };
-		39777E1013D662920042B928 /* root_iHeader_ControlCall5.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777E0313D662920042B928 /* root_iHeader_ControlCall5.m */; };
 		39777E4113D663C30042B928 /* ios_frameworkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777E4013D663C30042B928 /* ios_frameworkAppDelegate.m */; };
+		39777ECA13D66E840042B928 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777EC913D66E840042B928 /* Object.m */; };
 		398B31E813D6558600D543D4 /* BindableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B314D13D6558600D543D4 /* BindableObject.m */; };
 		398B31E913D6558600D543D4 /* Callback.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B314F13D6558600D543D4 /* Callback.m */; };
 		398B31EB13D6558600D543D4 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B315313D6558600D543D4 /* Constants.m */; };
-		398B31EC13D6558600D543D4 /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B315513D6558600D543D4 /* Context.m */; };
 		398B31ED13D6558600D543D4 /* Evaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B315713D6558600D543D4 /* Evaluator.m */; };
 		398B31EE13D6558600D543D4 /* iTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B315913D6558600D543D4 /* iTableViewController.m */; };
 		398B31EF13D6558600D543D4 /* NameValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B315B13D6558600D543D4 /* NameValue.m */; };
 		398B31F013D6558600D543D4 /* NSSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B315E13D6558600D543D4 /* NSSelector.m */; };
 		398B31F113D6558600D543D4 /* NSStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B316013D6558600D543D4 /* NSStack.m */; };
 		398B31F213D6558600D543D4 /* NullObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B316213D6558600D543D4 /* NullObject.m */; };
-		398B31F313D6558600D543D4 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B316413D6558600D543D4 /* Object.m */; };
 		398B31F413D6558600D543D4 /* Scope.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B316613D6558600D543D4 /* Scope.m */; };
 		398B31F513D6558600D543D4 /* mobl.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B316913D6558600D543D4 /* mobl.m */; };
 		398B31F613D6558600D543D4 /* StylingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B316B13D6558600D543D4 /* StylingManager.m */; };
@@ -48,7 +34,6 @@
 		398B31F913D6558600D543D4 /* Bool.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B317213D6558600D543D4 /* Bool.m */; };
 		398B31FA13D6558600D543D4 /* DateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B317413D6558600D543D4 /* DateTime.m */; };
 		398B31FB13D6558600D543D4 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B317613D6558600D543D4 /* Entity.m */; };
-		398B31FC13D6558600D543D4 /* Num.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B317813D6558600D543D4 /* Num.m */; };
 		398B31FD13D6558600D543D4 /* String.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B317A13D6558600D543D4 /* String.m */; };
 		398B31FE13D6558600D543D4 /* Tuple1.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B317C13D6558600D543D4 /* Tuple1.m */; };
 		398B31FF13D6558600D543D4 /* Tuple2.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B317E13D6558600D543D4 /* Tuple2.m */; };
@@ -99,10 +84,11 @@
 		398B322C13D6558600D543D4 /* iTabPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B31DB13D6558600D543D4 /* iTabPage.m */; };
 		398B322D13D6558600D543D4 /* iTabSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B31DD13D6558600D543D4 /* iTabSet.m */; };
 		398B322E13D6558600D543D4 /* iTextBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B31DF13D6558600D543D4 /* iTextBox.m */; };
-		398B322F13D6558600D543D4 /* iTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B31E113D6558600D543D4 /* iTextField.m */; };
 		398B323013D6558600D543D4 /* iTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B31E313D6558600D543D4 /* iTimePicker.m */; };
 		398B323113D6558600D543D4 /* iView.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B31E513D6558600D543D4 /* iView.m */; };
 		398B323213D6558600D543D4 /* iWhen.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B31E713D6558600D543D4 /* iWhen.m */; };
+		39A421B813D67EDE00005C12 /* Num.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A421B713D67EDE00005C12 /* Num.m */; };
+		39D86F0713D6818D001E2A2D /* AppInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D86F0613D6818D001E2A2D /* AppInit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,41 +104,15 @@
 		32CA4F630368D1EE00C91783 /* ios_framework_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ios_framework_Prefix.pch; sourceTree = "<group>"; };
 		39777DE513D65FDB0042B928 /* Collection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collection.h; sourceTree = "<group>"; };
 		39777DE613D65FDB0042B928 /* Collection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collection.m; sourceTree = "<group>"; };
-		39777DEA13D662920042B928 /* AppInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInit.h; sourceTree = "<group>"; };
-		39777DEB13D662920042B928 /* AppInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInit.m; sourceTree = "<group>"; };
-		39777DEC13D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp12.h; sourceTree = "<group>"; };
-		39777DED13D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp12.m; sourceTree = "<group>"; };
-		39777DEE13D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp14.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp14.h; sourceTree = "<group>"; };
-		39777DEF13D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp14.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp14.m; sourceTree = "<group>"; };
-		39777DF013D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_AddPerson_iHeader_ControlCall4.h; sourceTree = "<group>"; };
-		39777DF113D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_AddPerson_iHeader_ControlCall4.m; sourceTree = "<group>"; };
-		39777DF213D662920042B928 /* ControlVariable_AddPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_AddPerson.h; sourceTree = "<group>"; };
-		39777DF313D662920042B928 /* ControlVariable_AddPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_AddPerson.m; sourceTree = "<group>"; };
-		39777DF413D662920042B928 /* ControlVariable_nextlineTextBoxStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_nextlineTextBoxStyle.h; sourceTree = "<group>"; };
-		39777DF513D662920042B928 /* ControlVariable_nextlineTextBoxStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_nextlineTextBoxStyle.m; sourceTree = "<group>"; };
-		39777DF613D662920042B928 /* ControlVariable_Organization__Description.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_Organization__Description.h; sourceTree = "<group>"; };
-		39777DF713D662920042B928 /* ControlVariable_Organization__Description.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_Organization__Description.m; sourceTree = "<group>"; };
-		39777DF813D662920042B928 /* ControlVariable_Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_Organization.h; sourceTree = "<group>"; };
-		39777DF913D662920042B928 /* ControlVariable_Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_Organization.m; sourceTree = "<group>"; };
-		39777DFA13D662920042B928 /* ControlVariable_Person__Description.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_Person__Description.h; sourceTree = "<group>"; };
-		39777DFB13D662920042B928 /* ControlVariable_Person__Description.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_Person__Description.m; sourceTree = "<group>"; };
-		39777DFC13D662920042B928 /* ControlVariable_Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_Person.h; sourceTree = "<group>"; };
-		39777DFD13D662920042B928 /* ControlVariable_Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_Person.m; sourceTree = "<group>"; };
-		39777DFE13D662920042B928 /* ControlVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable.h; sourceTree = "<group>"; };
-		39777DFF13D662920042B928 /* ControlVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable.m; sourceTree = "<group>"; };
-		39777E0013D662920042B928 /* root_iHeader_ControlCall5_callback_tmp19.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = root_iHeader_ControlCall5_callback_tmp19.h; sourceTree = "<group>"; };
-		39777E0113D662920042B928 /* root_iHeader_ControlCall5_callback_tmp19.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = root_iHeader_ControlCall5_callback_tmp19.m; sourceTree = "<group>"; };
-		39777E0213D662920042B928 /* root_iHeader_ControlCall5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = root_iHeader_ControlCall5.h; sourceTree = "<group>"; };
-		39777E0313D662920042B928 /* root_iHeader_ControlCall5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = root_iHeader_ControlCall5.m; sourceTree = "<group>"; };
 		39777E4013D663C30042B928 /* ios_frameworkAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ios_frameworkAppDelegate.m; sourceTree = "<group>"; };
+		39777EC813D66E840042B928 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		39777EC913D66E840042B928 /* Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Object.m; sourceTree = "<group>"; };
 		398B314C13D6558600D543D4 /* BindableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindableObject.h; sourceTree = "<group>"; };
 		398B314D13D6558600D543D4 /* BindableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindableObject.m; sourceTree = "<group>"; };
 		398B314E13D6558600D543D4 /* Callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Callback.h; sourceTree = "<group>"; };
 		398B314F13D6558600D543D4 /* Callback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Callback.m; sourceTree = "<group>"; };
 		398B315213D6558600D543D4 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		398B315313D6558600D543D4 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		398B315413D6558600D543D4 /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
-		398B315513D6558600D543D4 /* Context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Context.m; sourceTree = "<group>"; };
 		398B315613D6558600D543D4 /* Evaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evaluator.h; sourceTree = "<group>"; };
 		398B315713D6558600D543D4 /* Evaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Evaluator.m; sourceTree = "<group>"; };
 		398B315813D6558600D543D4 /* iTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTableViewController.h; sourceTree = "<group>"; };
@@ -166,8 +126,6 @@
 		398B316013D6558600D543D4 /* NSStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStack.m; sourceTree = "<group>"; };
 		398B316113D6558600D543D4 /* NullObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullObject.h; sourceTree = "<group>"; };
 		398B316213D6558600D543D4 /* NullObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullObject.m; sourceTree = "<group>"; };
-		398B316313D6558600D543D4 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
-		398B316413D6558600D543D4 /* Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Object.m; sourceTree = "<group>"; };
 		398B316513D6558600D543D4 /* Scope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scope.h; sourceTree = "<group>"; };
 		398B316613D6558600D543D4 /* Scope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scope.m; sourceTree = "<group>"; };
 		398B316813D6558600D543D4 /* mobl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl.h; sourceTree = "<group>"; };
@@ -184,8 +142,6 @@
 		398B317413D6558600D543D4 /* DateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTime.m; sourceTree = "<group>"; };
 		398B317513D6558600D543D4 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		398B317613D6558600D543D4 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
-		398B317713D6558600D543D4 /* Num.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Num.h; sourceTree = "<group>"; };
-		398B317813D6558600D543D4 /* Num.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Num.m; sourceTree = "<group>"; };
 		398B317913D6558600D543D4 /* String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = String.h; sourceTree = "<group>"; };
 		398B317A13D6558600D543D4 /* String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = String.m; sourceTree = "<group>"; };
 		398B317B13D6558600D543D4 /* Tuple1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tuple1.h; sourceTree = "<group>"; };
@@ -285,14 +241,16 @@
 		398B31DD13D6558600D543D4 /* iTabSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTabSet.m; sourceTree = "<group>"; };
 		398B31DE13D6558600D543D4 /* iTextBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTextBox.h; sourceTree = "<group>"; };
 		398B31DF13D6558600D543D4 /* iTextBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTextBox.m; sourceTree = "<group>"; };
-		398B31E013D6558600D543D4 /* iTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTextField.h; sourceTree = "<group>"; };
-		398B31E113D6558600D543D4 /* iTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTextField.m; sourceTree = "<group>"; };
 		398B31E213D6558600D543D4 /* iTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTimePicker.h; sourceTree = "<group>"; };
 		398B31E313D6558600D543D4 /* iTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTimePicker.m; sourceTree = "<group>"; };
 		398B31E413D6558600D543D4 /* iView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iView.h; sourceTree = "<group>"; };
 		398B31E513D6558600D543D4 /* iView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iView.m; sourceTree = "<group>"; };
 		398B31E613D6558600D543D4 /* iWhen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iWhen.h; sourceTree = "<group>"; };
 		398B31E713D6558600D543D4 /* iWhen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iWhen.m; sourceTree = "<group>"; };
+		39A421B613D67EDE00005C12 /* Num.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Num.h; sourceTree = "<group>"; };
+		39A421B713D67EDE00005C12 /* Num.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Num.m; sourceTree = "<group>"; };
+		39D86F0513D6818D001E2A2D /* AppInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInit.h; sourceTree = "<group>"; };
+		39D86F0613D6818D001E2A2D /* AppInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInit.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ios_framework-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ios_framework-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -385,8 +343,6 @@
 				398B314F13D6558600D543D4 /* Callback.m */,
 				398B315213D6558600D543D4 /* Constants.h */,
 				398B315313D6558600D543D4 /* Constants.m */,
-				398B315413D6558600D543D4 /* Context.h */,
-				398B315513D6558600D543D4 /* Context.m */,
 				398B315613D6558600D543D4 /* Evaluator.h */,
 				398B315713D6558600D543D4 /* Evaluator.m */,
 				398B315813D6558600D543D4 /* iTableViewController.h */,
@@ -400,8 +356,6 @@
 				398B316013D6558600D543D4 /* NSStack.m */,
 				398B316113D6558600D543D4 /* NullObject.h */,
 				398B316213D6558600D543D4 /* NullObject.m */,
-				398B316313D6558600D543D4 /* Object.h */,
-				398B316413D6558600D543D4 /* Object.m */,
 				398B316513D6558600D543D4 /* Scope.h */,
 				398B316613D6558600D543D4 /* Scope.m */,
 				398B316A13D6558600D543D4 /* StylingManager.h */,
@@ -440,8 +394,8 @@
 				398B317413D6558600D543D4 /* DateTime.m */,
 				398B317513D6558600D543D4 /* Entity.h */,
 				398B317613D6558600D543D4 /* Entity.m */,
-				398B317713D6558600D543D4 /* Num.h */,
-				398B317813D6558600D543D4 /* Num.m */,
+				39777EC813D66E840042B928 /* Object.h */,
+				39777EC913D66E840042B928 /* Object.m */,
 				398B317913D6558600D543D4 /* String.h */,
 				398B317A13D6558600D543D4 /* String.m */,
 				398B317B13D6558600D543D4 /* Tuple1.h */,
@@ -454,6 +408,8 @@
 				398B318213D6558600D543D4 /* Tuple4.m */,
 				398B318313D6558600D543D4 /* Tuple5.h */,
 				398B318413D6558600D543D4 /* Tuple5.m */,
+				39A421B613D67EDE00005C12 /* Num.h */,
+				39A421B713D67EDE00005C12 /* Num.m */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -461,32 +417,8 @@
 		398B318B13D6558600D543D4 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				39777DEA13D662920042B928 /* AppInit.h */,
-				39777DEB13D662920042B928 /* AppInit.m */,
-				39777DEC13D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp12.h */,
-				39777DED13D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp12.m */,
-				39777DEE13D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp14.h */,
-				39777DEF13D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp14.m */,
-				39777DF013D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4.h */,
-				39777DF113D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4.m */,
-				39777DF213D662920042B928 /* ControlVariable_AddPerson.h */,
-				39777DF313D662920042B928 /* ControlVariable_AddPerson.m */,
-				39777DF413D662920042B928 /* ControlVariable_nextlineTextBoxStyle.h */,
-				39777DF513D662920042B928 /* ControlVariable_nextlineTextBoxStyle.m */,
-				39777DF613D662920042B928 /* ControlVariable_Organization__Description.h */,
-				39777DF713D662920042B928 /* ControlVariable_Organization__Description.m */,
-				39777DF813D662920042B928 /* ControlVariable_Organization.h */,
-				39777DF913D662920042B928 /* ControlVariable_Organization.m */,
-				39777DFA13D662920042B928 /* ControlVariable_Person__Description.h */,
-				39777DFB13D662920042B928 /* ControlVariable_Person__Description.m */,
-				39777DFC13D662920042B928 /* ControlVariable_Person.h */,
-				39777DFD13D662920042B928 /* ControlVariable_Person.m */,
-				39777DFE13D662920042B928 /* ControlVariable.h */,
-				39777DFF13D662920042B928 /* ControlVariable.m */,
-				39777E0013D662920042B928 /* root_iHeader_ControlCall5_callback_tmp19.h */,
-				39777E0113D662920042B928 /* root_iHeader_ControlCall5_callback_tmp19.m */,
-				39777E0213D662920042B928 /* root_iHeader_ControlCall5.h */,
-				39777E0313D662920042B928 /* root_iHeader_ControlCall5.m */,
+				39D86F0513D6818D001E2A2D /* AppInit.h */,
+				39D86F0613D6818D001E2A2D /* AppInit.m */,
 				398B318C13D6558600D543D4 /* root.h */,
 				398B318D13D6558600D543D4 /* root.m */,
 				398B318E13D6558600D543D4 /* Styles */,
@@ -590,8 +522,6 @@
 				398B31DD13D6558600D543D4 /* iTabSet.m */,
 				398B31DE13D6558600D543D4 /* iTextBox.h */,
 				398B31DF13D6558600D543D4 /* iTextBox.m */,
-				398B31E013D6558600D543D4 /* iTextField.h */,
-				398B31E113D6558600D543D4 /* iTextField.m */,
 				398B31E213D6558600D543D4 /* iTimePicker.h */,
 				398B31E313D6558600D543D4 /* iTimePicker.m */,
 				398B31E413D6558600D543D4 /* iView.h */,
@@ -668,14 +598,12 @@
 				398B31E813D6558600D543D4 /* BindableObject.m in Sources */,
 				398B31E913D6558600D543D4 /* Callback.m in Sources */,
 				398B31EB13D6558600D543D4 /* Constants.m in Sources */,
-				398B31EC13D6558600D543D4 /* Context.m in Sources */,
 				398B31ED13D6558600D543D4 /* Evaluator.m in Sources */,
 				398B31EE13D6558600D543D4 /* iTableViewController.m in Sources */,
 				398B31EF13D6558600D543D4 /* NameValue.m in Sources */,
 				398B31F013D6558600D543D4 /* NSSelector.m in Sources */,
 				398B31F113D6558600D543D4 /* NSStack.m in Sources */,
 				398B31F213D6558600D543D4 /* NullObject.m in Sources */,
-				398B31F313D6558600D543D4 /* Object.m in Sources */,
 				398B31F413D6558600D543D4 /* Scope.m in Sources */,
 				398B31F513D6558600D543D4 /* mobl.m in Sources */,
 				398B31F613D6558600D543D4 /* StylingManager.m in Sources */,
@@ -684,7 +612,6 @@
 				398B31F913D6558600D543D4 /* Bool.m in Sources */,
 				398B31FA13D6558600D543D4 /* DateTime.m in Sources */,
 				398B31FB13D6558600D543D4 /* Entity.m in Sources */,
-				398B31FC13D6558600D543D4 /* Num.m in Sources */,
 				398B31FD13D6558600D543D4 /* String.m in Sources */,
 				398B31FE13D6558600D543D4 /* Tuple1.m in Sources */,
 				398B31FF13D6558600D543D4 /* Tuple2.m in Sources */,
@@ -734,25 +661,14 @@
 				398B322C13D6558600D543D4 /* iTabPage.m in Sources */,
 				398B322D13D6558600D543D4 /* iTabSet.m in Sources */,
 				398B322E13D6558600D543D4 /* iTextBox.m in Sources */,
-				398B322F13D6558600D543D4 /* iTextField.m in Sources */,
 				398B323013D6558600D543D4 /* iTimePicker.m in Sources */,
 				398B323113D6558600D543D4 /* iView.m in Sources */,
 				398B323213D6558600D543D4 /* iWhen.m in Sources */,
 				39777DE713D65FDB0042B928 /* Collection.m in Sources */,
-				39777E0413D662920042B928 /* AppInit.m in Sources */,
-				39777E0513D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp12.m in Sources */,
-				39777E0613D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4_callback_tmp14.m in Sources */,
-				39777E0713D662920042B928 /* ControlVariable_AddPerson_iHeader_ControlCall4.m in Sources */,
-				39777E0813D662920042B928 /* ControlVariable_AddPerson.m in Sources */,
-				39777E0913D662920042B928 /* ControlVariable_nextlineTextBoxStyle.m in Sources */,
-				39777E0A13D662920042B928 /* ControlVariable_Organization__Description.m in Sources */,
-				39777E0B13D662920042B928 /* ControlVariable_Organization.m in Sources */,
-				39777E0C13D662920042B928 /* ControlVariable_Person__Description.m in Sources */,
-				39777E0D13D662920042B928 /* ControlVariable_Person.m in Sources */,
-				39777E0E13D662920042B928 /* ControlVariable.m in Sources */,
-				39777E0F13D662920042B928 /* root_iHeader_ControlCall5_callback_tmp19.m in Sources */,
-				39777E1013D662920042B928 /* root_iHeader_ControlCall5.m in Sources */,
 				39777E4113D663C30042B928 /* ios_frameworkAppDelegate.m in Sources */,
+				39777ECA13D66E840042B928 /* Object.m in Sources */,
+				39A421B813D67EDE00005C12 /* Num.m in Sources */,
+				39D86F0713D6818D001E2A2D /* AppInit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,8 @@
 #import "Entity.h"
 #import "Utilities.h"
 #import "DateTime.h"
+#import "Num.h"
+#import "Bool.h"
 
 
 @implementation Entity
@@ -29,12 +31,18 @@
 
 -(id) convert: (BindableObject*) prop
 {
-	if (prop.type == Num)
-		return [NSNumber numberWithFloat:prop.numValue];
+	if ([prop.value isKindOfClass:[Num class]])
+	{
+		Num* v = (Num*)prop.value;
+		return [NSNumber numberWithFloat:v.value];
+	}
 	
-	if (prop.type == Bool)
-		return [NSNumber numberWithBool:prop.boolValue];
-	
+	if ([prop.value isKindOfClass:[Bool class]])
+	{
+		Bool* v = (Bool*)prop.value;
+		return [NSNumber numberWithBool:v.value];
+	}
+
 	if (prop.value == nil)
 		return nil;
 	

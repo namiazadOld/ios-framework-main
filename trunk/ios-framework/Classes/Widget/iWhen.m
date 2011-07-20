@@ -15,16 +15,22 @@
 @implementation iWhen
 @synthesize when, elseWhen, condition, conditionBindableObject;
 
--(BOOL) condition
+Bool* conditionCache;
+
+-(Bool*) condition
 {
-	return self.visible;
+	if (conditionCache == NULL)
+		conditionCache = [[Bool alloc] initializeWithValue:self.visible];
+	
+	conditionCache.value = self.visible;
+	return conditionCache;
 }
 
--(void)setCondition:(BOOL)aBool
+-(void)setCondition:(Bool*)aBool
 {
 	@synchronized(self)
 	{
-		if (aBool)
+		if (aBool.value)
 		{
 			[self.when show];
 			[self.elseWhen hide];
@@ -47,7 +53,7 @@
 		self.locked = YES;
 		if ([bo isEqual:self.conditionBindableObject])
 		{
-			[self setCondition:bo.boolValue];
+			[self setCondition:bo.value];
 		}
 		self.locked = NO;
 	}
@@ -60,7 +66,7 @@
 	switch (index) {
 		case 0:
 			self.conditionBindableObject = bo;
-			[self setCondition:bo.boolValue];
+			[self setCondition:bo.value];
 			break;
 		default:
 			break;
@@ -92,7 +98,7 @@
 	[self.scope exitScope];
 	[parent setCurrentRole:cr];
 	
-	[self setCondition:self.conditionBindableObject.boolValue];
+	[self setCondition:self.conditionBindableObject.value];
 	return self;
 }
 
@@ -106,7 +112,7 @@
 	if (!self.parentWidget.visible)
 		return;
 	self.visible = YES;
-	[self setCondition:self.conditionBindableObject.boolValue];
+	[self setCondition:self.conditionBindableObject.value];
 	
 }
 

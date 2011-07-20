@@ -12,16 +12,21 @@
 @implementation iSwitch
 @synthesize switchable, status, statusBindableObject;
 
--(BOOL) status
+Bool* statusCache;
+
+-(Bool*) status
 {
-	return self.switchable.on;
+	if (statusCache == NULL)
+		statusCache = [[Bool alloc] initWithBool:switchable.on];
+	statusCache.value = switchable.on;
+	return statusCache;
 }
 
--(void)setStatus: (BOOL) aBool
+-(void)setStatus: (Bool*) aBool
 {
 	@synchronized(self)
 	{
-		[self.switchable setOn:aBool animated:YES];
+		[self.switchable setOn:aBool.value animated:YES];
 	}
 }
 
@@ -37,7 +42,7 @@
 	if (!self.locked)
 	{
 		self.locked = YES;
-		[self.statusBindableObject setBoolValue:self.switchable.on];
+		[self.statusBindableObject setValue:self.status];
 		self.locked = NO;
 	}
 }
@@ -47,7 +52,7 @@
 	if (!self.locked)
 	{
 		self.locked = YES;
-		[self.switchable setOn:bo.boolValue animated:YES];
+		[self.switchable setOn:[bo.value value] animated:YES];
 		self.locked = NO;
 	}
 }
@@ -59,7 +64,7 @@
 	switch (index) {
 		case 0: 
 			statusBindableObject = bo;
-			[self.switchable setOn:bo.boolValue animated:YES];
+			[self setStatus:bo.value];
 			break;
 		case 1:
 			[self setControlStyle:(UIStyle*)bo.value];
