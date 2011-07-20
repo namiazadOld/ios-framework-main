@@ -2,9 +2,9 @@
 {
 	1D3623250D0F684500981E51 /* ios_frameworkAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1965, 2652}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 2665}}";
 			sepNavSelRange = "{974, 0}";
-			sepNavVisRange = "{346, 1265}";
+			sepNavVisRange = "{367, 1244}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* ios-framework */ = {
@@ -32,7 +32,7 @@
 					20,
 					545,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -47,19 +47,30 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 332813630;
-			PBXWorkspaceStateSaveDate = 332813630;
+			PBXPerProjectTemplateStateSaveDate = 332816241;
+			PBXWorkspaceStateSaveDate = 332816241;
 		};
 		perUserProjectItems = {
-			398B323D13D65B1500D543D4 /* PBXTextBookmark */ = 398B323D13D65B1500D543D4 /* PBXTextBookmark */;
-			398B323E13D65B1500D543D4 /* PBXTextBookmark */ = 398B323E13D65B1500D543D4 /* PBXTextBookmark */;
-			398B324013D65B1500D543D4 /* PBXTextBookmark */ = 398B324013D65B1500D543D4 /* PBXTextBookmark */;
-			398B324213D65B1500D543D4 /* PBXTextBookmark */ = 398B324213D65B1500D543D4 /* PBXTextBookmark */;
-			398B324613D65B4400D543D4 /* PBXTextBookmark */ = 398B324613D65B4400D543D4 /* PBXTextBookmark */;
+			39777DE013D65F860042B928 /* PBXTextBookmark */ = 39777DE013D65F860042B928 /* PBXTextBookmark */;
+			398B323D13D65B1500D543D4 = 398B323D13D65B1500D543D4 /* PBXTextBookmark */;
+			398B323E13D65B1500D543D4 = 398B323E13D65B1500D543D4 /* PBXTextBookmark */;
+			398B324013D65B1500D543D4 = 398B324013D65B1500D543D4 /* PBXTextBookmark */;
+			398B324213D65B1500D543D4 = 398B324213D65B1500D543D4 /* PBXTextBookmark */;
+			398B324613D65B4400D543D4 = 398B324613D65B4400D543D4 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 398B314913D6554A00D543D4 /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	39777DE013D65F860042B928 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ios_frameworkAppDelegate.m */;
+		name = "ios_frameworkAppDelegate.m: 40";
+		rLen = 0;
+		rLoc = 974;
+		rType = 0;
+		vrLen = 1244;
+		vrLoc = 367;
 	};
 	398B313013D6553E00D543D4 /* ios-framework */ = {
 		isa = PBXExecutable;
@@ -94,7 +105,7 @@
 		isSCMEnabled = 0;
 		scmConfiguration = {
 			repositoryNamesForRoots = {
-				"" = "";
+				"" = "ios-framework-main";
 			};
 		};
 	};
@@ -131,6 +142,7 @@
 	};
 	398B323F13D65B1500D543D4 /* ipad_framework_mainAppDelegate.h */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
 		name = ipad_framework_mainAppDelegate.h;
 		path = "/Users/nami/Documents/ios-framework___/Classes/ipad_framework_mainAppDelegate.h";
 		sourceTree = "<absolute>";
@@ -147,6 +159,7 @@
 	};
 	398B324113D65B1500D543D4 /* ipad_framework_mainAppDelegate.m */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
 		name = ipad_framework_mainAppDelegate.m;
 		path = "/Users/nami/Documents/ios-framework___/Classes/ipad_framework_mainAppDelegate.m";
 		sourceTree = "<absolute>";
