@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "iBaseControl.h"
+#import "Bool.h"
 
 
 @interface iSwitch : iBaseControl {
@@ -16,7 +17,7 @@
 }
 
 @property (nonatomic, retain) UISwitch* switchable;
-@property (nonatomic, assign) BOOL status;
+@property (nonatomic, retain) Bool* status;
 @property (nonatomic, retain) BindableObject* statusBindableObject;
 
 @end

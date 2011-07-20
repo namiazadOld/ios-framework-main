@@ -10,9 +10,6 @@
 #import "BindableObject.h"
 #import "Utilities.h"
 
-
-
-
 @implementation Scope
 
 @synthesize parent, variables;
@@ -42,43 +39,12 @@ static Scope* instance;
 	return self;
 }
 
--(void) assignRef: (NSString*)key value: (id) value
+-(void) assign: (NSString*)key value: (id) value
 {
 	BindableObject* b = (BindableObject*)[self get:key];
 	
 	if (b != nil)
-	{
-		if ([value isKindOfClass:[BindableObject class]])
-		{
-			switch (b.type) {
-				case Num:
-					b.numValue = [value numValue];
-					break;
-				case Bool:
-					b.boolValue = [value boolValue];
-					break;
-				case Ref:
-					b.value = [value value];
-					break;
-				default:
-					break;
-			}
-		}
-		else
-			b.value = value;
-	}
-}
-
--(void) assignNum: (NSString*)key value: (float) value
-{
-	BindableObject* b = (BindableObject*)[self get:key];
-	b.numValue = value;
-}
-
--(void) assignBool: (NSString*)key value: (BOOL) value
-{
-	BindableObject* b = (BindableObject*)[self get:key];
-	b.boolValue = value;
+		b.value = value;
 }
 
 -(void) set: (NSString*)key variable: (NSObject*) variable

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Scope.h"
+#import "Object.h"
 
 
 @interface Evaluator : NSObject {
@@ -17,8 +18,6 @@
 @property (retain, readwrite) Scope* scope;
 
 -(Evaluator*) initWithScope: (Scope*)_scope;
--(float) evaluateNum;
--(BOOL) evaluateBool;
--(id) evaluate;
+-(Object*) evaluate;
 
 @end

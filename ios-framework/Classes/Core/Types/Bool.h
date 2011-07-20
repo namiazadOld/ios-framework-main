@@ -6,12 +6,16 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-
+#import <Foundation/Foundation.h>
 #import "Object.h"
 
 
 @interface Bool : Object {
-
+	BOOL value;
 }
+
+@property (assign) BOOL value;
+
+-(Bool*) initWithBool: (BOOL)_value;
 
 @end

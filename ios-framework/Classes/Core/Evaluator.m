@@ -18,17 +18,7 @@
 	return self;
 }
 
--(float) evaluateNum
-{
-	return 0;
-}
-
--(BOOL) evaluateBool
-{
-	return YES;
-}
-
--(id) evaluate
+-(Object*) evaluate
 {
 	return NULL;
 }

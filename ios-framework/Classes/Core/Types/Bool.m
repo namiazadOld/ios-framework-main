@@ -10,5 +10,11 @@
 
 
 @implementation Bool
+@synthesize value;
 
+-(Bool*) initWithBool: (BOOL)_value
+{
+	value = _value;
+	return self;
+}
 @end

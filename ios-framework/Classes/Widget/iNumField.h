@@ -8,20 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "iTextBox.h"
+#import "Num.h"
 
 
 @interface iNumField : iTextBox {
 	BindableObject* numberBindableObject;
 }
 
-//@property (nonatomic, retain) NSNumber* number;
-//
-//-(NSNumber*) getNumberFromText;
-
-@property (nonatomic, assign) float number;
+@property (nonatomic, retain) Num* number;
 @property (nonatomic, retain) BindableObject* numberBindableObject;
 
--(NSNumber*) getNumberFromText;
+-(Num*) getNumberFromText;
 
 
 @end
