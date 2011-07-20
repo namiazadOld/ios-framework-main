@@ -6,7 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+
 #import "Object.h"
 #import "BindableObject.h"
 
@@ -19,6 +19,6 @@
 
 @property (nonatomic, retain) BindableObject* length;
 
--(id) get
+
 
 @end
