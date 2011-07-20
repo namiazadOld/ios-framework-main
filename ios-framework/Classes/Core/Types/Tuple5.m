@@ -8,7 +8,6 @@
 
 #import "Tuple5.h"
 #import "Utilities.h"
-#import "TypedValue.h"
 
 
 @implementation Tuple5
@@ -17,7 +16,23 @@
 -(Tuple1*) initialize:(NSArray*)values
 {
 	[super initialize:values];
-	self._5 = [Utilities InitWithType:(TypedValue*)[values objectAtIndex:4]];
+	//self._5 = [Utilities InitWithType:(TypedValue*)[values objectAtIndex:4]];
+	
+	id v = [values objectAtIndex:4];
+	
+	if (![v isKindOfClass:[BindableObject class]])
+	{
+		BindableObject* bo = [[BindableObject alloc] initializeWithValue:v];
+		self._5 = bo;
+	}
+	else
+	{
+		if ([[v value] isKindOfClass:[BindableObject class]])
+			self._5 = [v value];
+		else
+			self._5 = v;
+	}
+	
 	return self;
 }
 

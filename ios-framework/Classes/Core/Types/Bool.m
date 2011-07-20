@@ -17,4 +17,14 @@
 	value = _value;
 	return self;
 }
+
+-(Bool*) Not
+{
+	return [[Bool alloc] initWithBool:!value];
+}
+-(BOOL) isTrue
+{
+	return value == YES;
+}
+
 @end

@@ -21,7 +21,7 @@
 	BOOL removeFromListener;
 }
 
-@property (retain, readwrite) id value;
+@property (retain, readwrite, nonatomic) id value;
 @property (retain, readonly) NSMutableArray* listeners;
 @property (retain, readwrite) Evaluator* evaluator;
 @property (assign) BOOL removeFromListener;

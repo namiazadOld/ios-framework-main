@@ -18,7 +18,7 @@
 	return self;
 }
 
--(Object*) evaluate
+-(id) evaluate
 {
 	return NULL;
 }

@@ -14,6 +14,10 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		395C573213D76CDA0089701A /* AppInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C572B13D76CDA0089701A /* AppInit.m */; };
+		395C573313D76CDA0089701A /* ControlVariable_nextlineTextBoxStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C572D13D76CDA0089701A /* ControlVariable_nextlineTextBoxStyle.m */; };
+		395C573413D76CDA0089701A /* ControlVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C572F13D76CDA0089701A /* ControlVariable.m */; };
+		395C573513D76CDA0089701A /* root_callback_tmp314.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C573113D76CDA0089701A /* root_callback_tmp314.m */; };
 		39777DE713D65FDB0042B928 /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777DE613D65FDB0042B928 /* Collection.m */; };
 		39777E4113D663C30042B928 /* ios_frameworkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777E4013D663C30042B928 /* ios_frameworkAppDelegate.m */; };
 		39777ECA13D66E840042B928 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777EC913D66E840042B928 /* Object.m */; };
@@ -29,7 +33,6 @@
 		398B31F413D6558600D543D4 /* Scope.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B316613D6558600D543D4 /* Scope.m */; };
 		398B31F513D6558600D543D4 /* mobl.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B316913D6558600D543D4 /* mobl.m */; };
 		398B31F613D6558600D543D4 /* StylingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B316B13D6558600D543D4 /* StylingManager.m */; };
-		398B31F713D6558600D543D4 /* TypedValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B316D13D6558600D543D4 /* TypedValue.m */; };
 		398B31F813D6558600D543D4 /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B317013D6558600D543D4 /* Array.m */; };
 		398B31F913D6558600D543D4 /* Bool.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B317213D6558600D543D4 /* Bool.m */; };
 		398B31FA13D6558600D543D4 /* DateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B317413D6558600D543D4 /* DateTime.m */; };
@@ -88,7 +91,6 @@
 		398B323113D6558600D543D4 /* iView.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B31E513D6558600D543D4 /* iView.m */; };
 		398B323213D6558600D543D4 /* iWhen.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B31E713D6558600D543D4 /* iWhen.m */; };
 		39A421B813D67EDE00005C12 /* Num.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A421B713D67EDE00005C12 /* Num.m */; };
-		39D86F0713D6818D001E2A2D /* AppInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D86F0613D6818D001E2A2D /* AppInit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,14 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ios_framework_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ios_framework_Prefix.pch; sourceTree = "<group>"; };
+		395C572A13D76CDA0089701A /* AppInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInit.h; sourceTree = "<group>"; };
+		395C572B13D76CDA0089701A /* AppInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInit.m; sourceTree = "<group>"; };
+		395C572C13D76CDA0089701A /* ControlVariable_nextlineTextBoxStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_nextlineTextBoxStyle.h; sourceTree = "<group>"; };
+		395C572D13D76CDA0089701A /* ControlVariable_nextlineTextBoxStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_nextlineTextBoxStyle.m; sourceTree = "<group>"; };
+		395C572E13D76CDA0089701A /* ControlVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable.h; sourceTree = "<group>"; };
+		395C572F13D76CDA0089701A /* ControlVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable.m; sourceTree = "<group>"; };
+		395C573013D76CDA0089701A /* root_callback_tmp314.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = root_callback_tmp314.h; sourceTree = "<group>"; };
+		395C573113D76CDA0089701A /* root_callback_tmp314.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = root_callback_tmp314.m; sourceTree = "<group>"; };
 		39777DE513D65FDB0042B928 /* Collection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collection.h; sourceTree = "<group>"; };
 		39777DE613D65FDB0042B928 /* Collection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collection.m; sourceTree = "<group>"; };
 		39777E4013D663C30042B928 /* ios_frameworkAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ios_frameworkAppDelegate.m; sourceTree = "<group>"; };
@@ -132,8 +142,6 @@
 		398B316913D6558600D543D4 /* mobl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl.m; sourceTree = "<group>"; };
 		398B316A13D6558600D543D4 /* StylingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StylingManager.h; sourceTree = "<group>"; };
 		398B316B13D6558600D543D4 /* StylingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StylingManager.m; sourceTree = "<group>"; };
-		398B316C13D6558600D543D4 /* TypedValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypedValue.h; sourceTree = "<group>"; };
-		398B316D13D6558600D543D4 /* TypedValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypedValue.m; sourceTree = "<group>"; };
 		398B316F13D6558600D543D4 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
 		398B317013D6558600D543D4 /* Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Array.m; sourceTree = "<group>"; };
 		398B317113D6558600D543D4 /* Bool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bool.h; sourceTree = "<group>"; };
@@ -249,8 +257,6 @@
 		398B31E713D6558600D543D4 /* iWhen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iWhen.m; sourceTree = "<group>"; };
 		39A421B613D67EDE00005C12 /* Num.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Num.h; sourceTree = "<group>"; };
 		39A421B713D67EDE00005C12 /* Num.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Num.m; sourceTree = "<group>"; };
-		39D86F0513D6818D001E2A2D /* AppInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInit.h; sourceTree = "<group>"; };
-		39D86F0613D6818D001E2A2D /* AppInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInit.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ios_framework-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ios_framework-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -360,8 +366,6 @@
 				398B316613D6558600D543D4 /* Scope.m */,
 				398B316A13D6558600D543D4 /* StylingManager.h */,
 				398B316B13D6558600D543D4 /* StylingManager.m */,
-				398B316C13D6558600D543D4 /* TypedValue.h */,
-				398B316D13D6558600D543D4 /* TypedValue.m */,
 				398B318513D6558600D543D4 /* UIStyle.h */,
 				398B318613D6558600D543D4 /* UIStyle.m */,
 				398B318713D6558600D543D4 /* UIUtil.h */,
@@ -417,8 +421,14 @@
 		398B318B13D6558600D543D4 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				39D86F0513D6818D001E2A2D /* AppInit.h */,
-				39D86F0613D6818D001E2A2D /* AppInit.m */,
+				395C572A13D76CDA0089701A /* AppInit.h */,
+				395C572B13D76CDA0089701A /* AppInit.m */,
+				395C572C13D76CDA0089701A /* ControlVariable_nextlineTextBoxStyle.h */,
+				395C572D13D76CDA0089701A /* ControlVariable_nextlineTextBoxStyle.m */,
+				395C572E13D76CDA0089701A /* ControlVariable.h */,
+				395C572F13D76CDA0089701A /* ControlVariable.m */,
+				395C573013D76CDA0089701A /* root_callback_tmp314.h */,
+				395C573113D76CDA0089701A /* root_callback_tmp314.m */,
 				398B318C13D6558600D543D4 /* root.h */,
 				398B318D13D6558600D543D4 /* root.m */,
 				398B318E13D6558600D543D4 /* Styles */,
@@ -607,7 +617,6 @@
 				398B31F413D6558600D543D4 /* Scope.m in Sources */,
 				398B31F513D6558600D543D4 /* mobl.m in Sources */,
 				398B31F613D6558600D543D4 /* StylingManager.m in Sources */,
-				398B31F713D6558600D543D4 /* TypedValue.m in Sources */,
 				398B31F813D6558600D543D4 /* Array.m in Sources */,
 				398B31F913D6558600D543D4 /* Bool.m in Sources */,
 				398B31FA13D6558600D543D4 /* DateTime.m in Sources */,
@@ -668,7 +677,10 @@
 				39777E4113D663C30042B928 /* ios_frameworkAppDelegate.m in Sources */,
 				39777ECA13D66E840042B928 /* Object.m in Sources */,
 				39A421B813D67EDE00005C12 /* Num.m in Sources */,
-				39D86F0713D6818D001E2A2D /* AppInit.m in Sources */,
+				395C573213D76CDA0089701A /* AppInit.m in Sources */,
+				395C573313D76CDA0089701A /* ControlVariable_nextlineTextBoxStyle.m in Sources */,
+				395C573413D76CDA0089701A /* ControlVariable.m in Sources */,
+				395C573513D76CDA0089701A /* root_callback_tmp314.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

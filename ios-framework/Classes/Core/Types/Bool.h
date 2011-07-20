@@ -18,4 +18,6 @@
 
 -(Bool*) initWithBool: (BOOL)_value;
 
+-(Bool*) Not;
+-(BOOL) isTrue;
 @end

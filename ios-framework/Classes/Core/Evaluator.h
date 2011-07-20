@@ -18,6 +18,6 @@
 @property (retain, readwrite) Scope* scope;
 
 -(Evaluator*) initWithScope: (Scope*)_scope;
--(Object*) evaluate;
+-(id) evaluate;
 
 @end

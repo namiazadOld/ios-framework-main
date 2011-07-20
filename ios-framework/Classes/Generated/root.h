@@ -23,12 +23,8 @@
 
 @interface root : iView{
 	UIWindow *window;
-	UISplitViewController* split;
 }
 
 @property (nonatomic, retain) UIWindow *window;
-@property (nonatomic, retain) UISplitViewController* split;
-
-
 
 @end
