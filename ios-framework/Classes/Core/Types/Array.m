@@ -15,7 +15,7 @@
 -(Array*) init
 {
 	data = [[NSMutableArray alloc] init];
-	length = [[BindableObject alloc] initWithNumber:0];
+	_length = [[BindableObject alloc] initWithNumber:0];
 }
 
 -(BindableObject*) length
