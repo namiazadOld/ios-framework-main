@@ -7,7 +7,7 @@
 //
 
 #import "Bool.h"
-
+@class String;
 
 @implementation Bool
 @synthesize value;
@@ -22,9 +22,17 @@
 {
 	return [[Bool alloc] initWithBool:!value];
 }
+
 -(BOOL) isTrue
 {
 	return value == YES;
+}
+
+-(String*) toString
+{
+	if (value)
+		return @"True";
+	return @"False";
 }
 
 @end

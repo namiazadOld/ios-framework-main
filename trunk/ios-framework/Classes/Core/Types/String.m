@@ -10,5 +10,16 @@
 
 
 @implementation String
+@synthesize value;
 
+-(String*) initWithString: (NSString*)input
+{
+	value = input;
+	return self;
+}
+
+-(String*) toString
+{
+	return self;
+}
 @end
