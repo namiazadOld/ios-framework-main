@@ -7,7 +7,7 @@
 //
 
 #import "DateTime.h"
-
+#import "String.h"
 
 @implementation DateTime
 @synthesize date;
@@ -33,6 +33,12 @@
 -(float) getDay
 {
 	return 0;
+}
+
+-(String*) toString
+{
+	NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:self.date];
+	return [[String alloc] initWithString:[NSString stringWithFormat:@"%d/%d/%d", [components year], [components month], [components day]]];	
 }
 
 @end

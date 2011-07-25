@@ -11,7 +11,11 @@
 
 
 @interface String : Object {
-
+	NSString* value;
 }
+
+@property (retain, nonatomic) NSString* value;
+
+-(String*) initWithString: (NSString*)input;
 
 @end

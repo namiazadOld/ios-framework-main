@@ -9,6 +9,9 @@
 
 #import "Object.h"
 #import "BindableObject.h"
+#import "Num.h"
+#import "String.h"
+#import "Bool.h"
 
 
 @interface Array : Object{
@@ -19,6 +22,12 @@
 
 @property (nonatomic, retain) BindableObject* length;
 
-
+-(Object*) get: (Num*) n;
+-(void) push: (Object*) item;
+-(String*) join: (String*) sep;
+-(Object*) one;
+-(Bool*) contains: (Object*) item;
+-(Array*) splice: (Num*)idx arg:(Num*)numToDelete;
+-(void) insert: (Num*) idx arg:(Object*)item;
 
 @end
