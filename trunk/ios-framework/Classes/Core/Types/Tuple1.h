@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "BindableObject.h"
-#import "Object.h"
+#import "NSObject+mobl.h"
 
 
-@interface Tuple1 : Object {
+@interface Tuple1 : NSObject {
 	BindableObject* _1;
 }
 

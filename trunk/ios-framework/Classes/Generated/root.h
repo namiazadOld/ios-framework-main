@@ -20,6 +20,10 @@
 #import "Callback.h"
 #import "StylingManager.h"
 #import "UIStyle.h"
+#import "Num.h"
+#import "DateTime.h"
+#import "String.h"
+#import "Function1.h"
 
 @interface root : iView{
 	UIWindow *window;

@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Object.h"
+#import "NSObject+mobl.h"
 
 
-@interface Bool : Object {
+@interface Bool : NSObject {
 	BOOL value;
 }
 

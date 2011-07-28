@@ -12,7 +12,7 @@
 #import "StylingManager.h"
 #import "UIStyle.h"
 #import "BindableObject.h"
-#import "Object.h"
+
 #import "NameValue.h"
 
 #import "DateTime.h"

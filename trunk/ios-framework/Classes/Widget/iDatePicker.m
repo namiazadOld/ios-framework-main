@@ -16,7 +16,7 @@
 {
 	if (_date == NULL)
 		_date = [[DateTime alloc] init];
-	_date.date = datePicker.date;
+	_date._date = datePicker.date;
 	return _date;
 }
 
@@ -24,8 +24,8 @@
 {
 	@synchronized(self)
 	{
-		if (![[self.datePicker date] isEqualToDate:aDate.date])
-			[self.datePicker setDate:aDate.date];
+		if (![[self.datePicker date] isEqualToDate:aDate._date])
+			[self.datePicker setDate:aDate._date];
 	}
 }
 
@@ -60,7 +60,7 @@
 		
 		[self.dateBindableObject.value release];
 		DateTime* dt = [[DateTime alloc] init];
-		dt.date = [self.datePicker.date retain];
+		dt._date = [self.datePicker.date retain];
 		[self.dateBindableObject setValue:dt];
 		
 		//[self.showTimeBindableObject setBoolValue:(datePicker.datePickerMode == UIDatePickerModeDateAndTime)];

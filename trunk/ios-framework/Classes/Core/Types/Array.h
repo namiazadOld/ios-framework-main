@@ -7,27 +7,33 @@
 //
 
 
-#import "Object.h"
+
 #import "BindableObject.h"
 #import "Num.h"
-#import "String.h"
 #import "Bool.h"
+#import "Function1.h"
+#import "Generic.h"
 
 
-@interface Array : Object{
+@interface Array : Generic{
 	NSMutableArray* data;
 	BindableObject* _length;
 }
 
 
 @property (nonatomic, retain) BindableObject* length;
+@property (nonatomic, retain) NSMutableArray* data;
 
--(Object*) get: (Num*) n;
--(void) push: (Object*) item;
--(String*) join: (String*) sep;
--(Object*) one;
--(Bool*) contains: (Object*) item;
+-(NSObject*) get: (Num*) n;
+-(void) push: (NSObject*) item;
+-(NSString*) join: (NSString*) sep;
+-(NSObject*) one;
+-(Bool*) contains: (NSObject*) item;
 -(Array*) splice: (Num*)idx arg:(Num*)numToDelete;
--(void) insert: (Num*) idx arg:(Object*)item;
+-(void) insert: (Num*) idx arg:(NSObject*)item;
+-(void) remove: (NSObject*) item;
+-(Array*) initWithObjects:(id)firstObj, ...
+ NS_REQUIRES_NIL_TERMINATION;
+-(Array*) filter: (Function1*)fn;
 
 @end

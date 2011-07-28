@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Object.h"
+
 
 
 typedef enum 
@@ -25,7 +25,7 @@ typedef enum
 } Place;
 
 
-@interface UIStyle : Object {
+@interface UIStyle : NSObject {
 	int left;
 	int top;
 	int width;

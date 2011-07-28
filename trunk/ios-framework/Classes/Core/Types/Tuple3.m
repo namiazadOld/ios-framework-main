@@ -33,6 +33,7 @@
 		else
 			self._3 = v;
 	}	
+	
 	return self;
 }
 

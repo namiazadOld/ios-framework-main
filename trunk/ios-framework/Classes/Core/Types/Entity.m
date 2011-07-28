@@ -11,6 +11,7 @@
 #import "DateTime.h"
 #import "Num.h"
 #import "Bool.h"
+#import "Collection.h"
 
 
 @implementation Entity
@@ -25,6 +26,11 @@
 }
 
 -(void) sync: (NSManagedObject*)entity   
+{
+	
+}
+
+-(void) reSync: (NSManagedObject*)entity
 {
 	
 }
@@ -52,9 +58,34 @@
 	return prop.value;
 }
 
-+(void) all
+-(BindableObject*) reConvert: (id) attr
 {
+	if ([attr isKindOfClass:[NSNumber class]])
+	{
+		NSNumber* ns = (NSNumber*)attr;
+		if (strcmp([ns objCType], @encode(BOOL)) == 0)
+			return [[BindableObject alloc] initializeWithValue:[[Bool alloc] initWithBool:[ns boolValue]]];
+		else if (strcmp([ns objCType], @encode(float)) == 0)
+			return [[BindableObject alloc] initializeWithValue:[[Num alloc] initWithNumber:[ns floatValue]]];
+		
+		return nil;
+	}
 	
+	if ([attr isKindOfClass:[NSDate class]])
+	{
+		DateTime* dt = [[DateTime alloc] init];
+		dt._date = attr;
+		return [[BindableObject alloc] initializeWithValue:dt];
+	}
+	
+	return [[BindableObject alloc] initializeWithValue:attr];
+}
+
+//Static Methods
+
++(Collection*) all
+{
+	return nil;
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Entity.h"
+@class DateTime;
 
 
 @interface mobl : NSObject {
@@ -15,5 +16,6 @@
 }
 
 +(void) add: (Entity*) newItem;
++(DateTime*) now;
 
 @end

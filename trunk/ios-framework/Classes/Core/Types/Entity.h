@@ -6,19 +6,23 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "Object.h"
+
 #import "BindableObject.h"
+#import "NSObject+mobl.h"
+#import "Generic.h"
+@class Collection;
 
-
-@interface Entity : Object {
+@interface Entity : Generic{
 	NSString* id;
 }
 
 @property (retain, nonatomic) NSString* id;
 +(NSEntityDescription*) createDescription: (NSString*)name;
 -(void) sync: (NSManagedObject*)entity;
+-(void) reSync: (NSManagedObject*)entity;
 -(id) convert: (BindableObject*) prop;
+-(BindableObject*) reConvert: (id) attr
 
-+(void) all;
++(Collection*) all;
 
 @end
