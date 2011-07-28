@@ -7,7 +7,7 @@
 //
 
 #import "Bool.h"
-@class String;
+
 
 @implementation Bool
 @synthesize value;
@@ -28,7 +28,7 @@
 	return value == YES;
 }
 
--(String*) toString
+-(NSString*) toString
 {
 	if (value)
 		return @"True";

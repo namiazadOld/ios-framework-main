@@ -10,7 +10,7 @@
 
 
 @implementation Array
-@synthesize length = _length;
+@synthesize length = _length, data;
 
 -(Array*) init
 {
@@ -25,54 +25,79 @@
 	return _length;
 }
 
--(Object*) get: (Num*) n
+-(NSObject*) get: (Num*) n
 {
 	return [data objectAtIndex:n.value];
 }
 
--(void) push: (Object*) item
+-(void) push: (NSObject*) item
 {
 	[data addObject:item];
 }
 
--(String*) join: (String*) sep
+-(NSString*) join: (NSString*) sep
 {
 	NSMutableString* result = [[NSMutableString alloc] initWithString:@""];
 	
 	int index = 0;
-	for (Object* item in data)
+	for (NSObject* item in data)
 	{
 		if (index == 0)
-			[result appendString:[[item toString] value]];
+			[result appendString:[item toString]];
 		else
-			[result appendFormat:@"%@%@", sep.value, [[item toString] value]];
+			[result appendFormat:@"%@%@", sep, [item toString]];
 		index++;
 	}
 	
-	return [[String alloc] initWithString:result];
+	return result;
 }
 
--(Object*) one
+-(NSObject*) one
 {
 	if ([data count] == 0)
 		return nil;
 	return [data objectAtIndex:0];
 }
 
--(Bool*) contains: (Object*) item
+-(Bool*) contains: (NSObject*) item
 {
 	return [[Bool alloc] initWithBool:[data containsObject:item]];
 }
 
 -(Array*) splice: (Num*)idx arg:(Num*)numToDelete
 {
-	[data removeObjectsFromIndices:idx.value numIndices:numToDelete.value];
+	int startIndex = idx.value;
+	int count = numToDelete.value;
+	
+	while (count > 0)
+	{
+		[data removeObjectAtIndex:startIndex];
+		count--;
+	}
+		
 	return self;
 }
 
--(void) insert: (Num*) idx arg:(Object*)item
+-(void) insert: (Num*) idx arg:(NSObject*)item
 {
 	[data insertObject:item atIndex:idx.value];
+}
+
+-(void) remove: (NSObject*) item
+{
+	[data removeObject:item];
+}
+
+-(Array*) initWithObjects:(NSObject*)firstObj, ...
+{
+	[self init];
+	
+	va_list args;
+    va_start(args, firstObj);
+	for (NSObject* arg = firstObj; arg != nil; arg = va_arg(args, NSObject*))
+        [data addObject:arg];
+    va_end(args);
+	return self;
 }
 
 @end

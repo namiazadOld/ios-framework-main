@@ -8,6 +8,7 @@
 
 #import "mobl.h"
 #import "Utilities.h"
+#import "DateTime.h"
 
 
 @implementation mobl
@@ -25,6 +26,13 @@
 	if (![[Utilities ManagedObjectContext] save:&error]) {
 		// Handle the error.
 	}
+}
+
++(DateTime*) now
+{
+	DateTime* dt = [[DateTime alloc] init];
+	dt._date = [NSDate date];
+	return dt;
 }
 
 @end
