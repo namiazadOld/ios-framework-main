@@ -14,14 +14,18 @@
 
 @interface Entity : Generic{
 	NSString* id;
+	NSManagedObjectID* eId;
 }
 
 @property (retain, nonatomic) NSString* id;
+@property (retain, nonatomic) NSManagedObjectID* eId;
+
+
 +(NSEntityDescription*) createDescription: (NSString*)name;
 -(void) sync: (NSManagedObject*)entity;
 -(void) reSync: (NSManagedObject*)entity;
 -(id) convert: (BindableObject*) prop;
--(BindableObject*) reConvert: (id) attr
+-(NSObject*) reConvert: (id) attr;
 
 +(Collection*) all;
 

@@ -189,4 +189,21 @@
 	return [self._date isEqual:obj._date];
 }
 
+-(Bool*) e: (NSObject*) n
+{
+	if (![n isKindOfClass:[DateTime class]])
+		return [[Bool alloc] initWithBool:NO];
+	DateTime* input = (DateTime*)n;
+	return [[Bool alloc] initWithBool:[self._date isEqualToDate:input._date]];
+}
+
+-(Bool*) ne: (NSObject*) n
+{
+	if (![n isKindOfClass:[DateTime class]])
+		return [[Bool alloc] initWithBool:YES];
+	DateTime* input = (DateTime*)n;
+	return [[Bool alloc] initWithBool:![self._date isEqualToDate:input._date]];
+}
+
+
 @end

@@ -17,10 +17,12 @@
 
 Bool* conditionCache;
 
+
+
 -(Bool*) condition
 {
 	if (conditionCache == NULL)
-		conditionCache = [[Bool alloc] initializeWithValue:self.visible];
+		conditionCache = [[Bool alloc] initWithBool:self.visible];
 	
 	conditionCache.value = self.visible;
 	return conditionCache;
@@ -75,6 +77,12 @@ Bool* conditionCache;
 
 -(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
+	self.parentCache = parent;
+	self.when.parentCache = parent;
+	self.elseWhen.parentCache = parent;
+	
+	//in set condition when or else based on the condition will be rendered. in show method of 
+	//iBaseControl if the control has not been rendered, it will be rendered first.
 	[super render:arguments container: parent elements: elements];
 	iBaseControl* cr = [parent currentRole];
 	[parent setCurrentRole:self];
@@ -82,23 +90,34 @@ Bool* conditionCache;
 	NSStack* containerStack = [[NSStack alloc] init];
     [containerStack push:parent];
 	
-	[self.scope createInnerScope];
-	[self.when render:arguments container:parent elements:elements];
-	[self.when finilize];
-	[[containerStack top] addBodyControl:self.when];
-	[self.scope exitScope];
+	self.elseWhen.index = self.when.index = [parent.children count];
+	self.elseWhen.isWhen = self.when.isWhen = YES;
 	
-	[self.scope createInnerScope];
-	[self.elseWhen render:arguments container:parent elements:elements];
-	[self.elseWhen finilize];
-	[[containerStack top] addBodyControl:self.elseWhen];
-	[self.scope exitScope];
 	
+	//if ([self.conditionBindableObject.value isTrue])
+//	{
+//		[self.scope createInnerScope];
+//		[self.when render:arguments container:parent elements:elements];
+//		[self.when finilize];
+//		[[containerStack top] addBodyControl:self.when];
+//		[self.scope exitScope];
+//	}
+//	else
+//	{
+//		[self.scope createInnerScope];
+//		[self.elseWhen render:arguments container:parent elements:elements];
+//		[self.elseWhen finilize];
+//		[[containerStack top] addBodyControl:self.elseWhen];
+//		[self.scope exitScope];		
+//	}
+		
 	[containerStack pop];
 	[self.scope exitScope];
 	[parent setCurrentRole:cr];
 	
 	[self setCondition:self.conditionBindableObject.value];
+
+
 	return self;
 }
 
@@ -115,6 +134,5 @@ Bool* conditionCache;
 	[self setCondition:self.conditionBindableObject.value];
 	
 }
-
 
 @end

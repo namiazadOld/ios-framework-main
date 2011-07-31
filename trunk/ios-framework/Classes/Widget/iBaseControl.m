@@ -15,8 +15,8 @@
 #import "iWhen.h"
 
 @implementation iBaseControl
-@synthesize locked, parentWidget, visible, isRendered, removeFromListener,
-			lastInnerControl, viewController, anchor, place, lineNo,
+@synthesize locked, parentWidget, visible, isRendered, removeFromListener, parentCache,
+			lastInnerControl, viewController, anchor, place, lineNo, index, isWhen,
 			initialFrame, children, marginLeft, marginRight, marginTop, marginBottom, scope,
 			currentRole, elementOf, elements, args;
 
@@ -79,6 +79,7 @@
 
 -(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) _elements
 {
+	self.isRendered = YES;
 	visible = YES;
 	children = [[NSMutableArray alloc] init];
 	initialFrame = CGRectMake(-1, -1, -1, -1);
@@ -93,9 +94,7 @@
 	[self manageArguments:arguments container:parent];
 	
 	parent.lastInnerControl = self;
-	
-	self.isRendered = YES;
-	
+
 	return self;
 }
 
@@ -250,6 +249,17 @@
 
 -(void)show
 {
+	if (self.isWhen && !self.isRendered)
+	{
+		[self.scope createInnerScope];
+		[self render:self.args container:self.parentCache elements:self.elements];
+		[self finilize];
+		[self.parentCache addBodyControl:self];
+		[self.scope exitScope];	
+		
+		[self.parentCache.children removeObject:self];
+		[self.parentCache.children insertObject:self atIndex:self.index];
+	}
 	self.visible = YES;
 	if (!parentWidget.visible)
 		return;
