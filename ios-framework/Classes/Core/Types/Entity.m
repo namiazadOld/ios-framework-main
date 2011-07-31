@@ -12,10 +12,11 @@
 #import "Num.h"
 #import "Bool.h"
 #import "Collection.h"
+#import "NullObject.h"
 
 
 @implementation Entity
-@synthesize id;
+@synthesize id, eId;
 
 +(NSEntityDescription*) createDescription: (NSString*)name
 {
@@ -23,16 +24,6 @@
 	[nsed setName:name];
 	[nsed setManagedObjectClassName:name];
 	return nsed;
-}
-
--(void) sync: (NSManagedObject*)entity   
-{
-	
-}
-
--(void) reSync: (NSManagedObject*)entity
-{
-	
 }
 
 -(id) convert: (BindableObject*) prop
@@ -58,28 +49,62 @@
 	return prop.value;
 }
 
--(BindableObject*) reConvert: (id) attr
+-(NSObject*) reConvert: (id) attr
 {
 	if ([attr isKindOfClass:[NSNumber class]])
 	{
 		NSNumber* ns = (NSNumber*)attr;
-		if (strcmp([ns objCType], @encode(BOOL)) == 0)
-			return [[BindableObject alloc] initializeWithValue:[[Bool alloc] initWithBool:[ns boolValue]]];
-		else if (strcmp([ns objCType], @encode(float)) == 0)
-			return [[BindableObject alloc] initializeWithValue:[[Num alloc] initWithNumber:[ns floatValue]]];
+	
+		if (strcmp([ns objCType], "d") == 0)
+			return [[Num alloc] initWithNumber:[ns floatValue]];
+		else
+			return [[Bool alloc] initWithBool:[ns boolValue]];
 		
-		return nil;
+		return [[NullObject alloc] init];
 	}
 	
 	if ([attr isKindOfClass:[NSDate class]])
 	{
 		DateTime* dt = [[DateTime alloc] init];
 		dt._date = attr;
-		return [[BindableObject alloc] initializeWithValue:dt];
+		return dt;
 	}
 	
-	return [[BindableObject alloc] initializeWithValue:attr];
+	return attr;
 }
+
+-(void) sync: (NSManagedObject*)entity
+{
+	
+}
+
+
+-(void) reSync: (NSManagedObject*)entity
+{
+	self.eId = [entity objectID];
+}
+
+-(Bool*) e: (NSObject*) n
+{
+	if (![n isKindOfClass:[Entity class]])
+		return [[Bool alloc] initWithBool:NO];
+	Entity* input = (Entity*)n;
+	return [[Bool alloc] initWithBool:[self.eId isEqual:input.eId]];
+}
+
+-(Bool*) ne: (NSObject*) n
+{
+	if (![n isKindOfClass:[Entity class]])
+		return [[Bool alloc] initWithBool:YES];
+	Entity* input = (Entity*)n;
+	return [[Bool alloc] initWithBool:![self.eId isEqual:input.eId]];
+}
+
+-(BOOL) isEqual:(id)object
+{
+	return [[self e:object] value];
+}
+
 
 //Static Methods
 
@@ -87,5 +112,7 @@
 {
 	return nil;
 }
+
+
 
 @end

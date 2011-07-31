@@ -41,6 +41,10 @@
 	BOOL isRendered;
 	BOOL removeFromListener;
 	
+	iBaseControl* parentCache;
+	int index;
+	BOOL isWhen;
+	
 }
 
 //@property (assign) CGRect lastInnerControlFrame;
@@ -65,6 +69,11 @@
 @property (nonatomic, retain) NSMutableArray* args;
 @property (assign) BOOL isRendered;
 @property (assign) BOOL removeFromListener;
+
+//Two belowing control only works for When clause.
+@property (retain, nonatomic) iBaseControl* parentCache;
+@property (assign) int index;
+@property (assign) BOOL isWhen;
 
 -(iBaseControl*) initWithElementOf: (iBaseControl*)_elementOf;
 -(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements;

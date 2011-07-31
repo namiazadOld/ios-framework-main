@@ -25,7 +25,7 @@
 {
 	@synchronized(self)
 	{
-		self.textBox.text = [[NSNumber numberWithFloat:aNumber.value] stringValue];
+		self.textBox.text = [aNumber toString];
 	}
 }
 

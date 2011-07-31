@@ -17,3 +17,4 @@ float	  const DEFAULT_X = -1;
 float	  const DEFAULT_Y = -1;
 float	  const DEFAULT_WIDTH = -1;
 float     const DEFAULT_HEIGHT = -1;
+NSString* const ENTITY_POSTFIX = @"__Description";
