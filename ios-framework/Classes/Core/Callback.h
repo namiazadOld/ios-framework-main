@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Scope.h"
+#import "NSString+mobl.h"
+#import "NSObject+mobl.h"
 
 
 @interface Callback : NSObject {
