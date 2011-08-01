@@ -227,6 +227,8 @@ static BOOL _ordered;
 	container.lastInnerControl = emp;
 	NSMutableArray* flattenChildren = [container getFlattenChildren];
 	for (iBaseControl* child in flattenChildren)
+		[child setFrame:CGRectMake(0, 0, 0, 0)];
+	for (iBaseControl* child in flattenChildren)
 	{
 		if (!child.visible)
 			continue;
@@ -243,7 +245,7 @@ static BOOL _ordered;
 	}
 	[flattenChildren release];
 	container.lastInnerControl = nil;
-	[emp release];
+	//[emp release];
 }
 
 @end
