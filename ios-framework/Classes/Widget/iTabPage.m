@@ -34,6 +34,7 @@
 -(iBaseControl*) render: (NSMutableArray*) arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
 	self.tabPage = [[UIViewController alloc] init];
+	self.tabPage.view.frame = CGRectMake(0, 0, self.tabPage.view.frame.size.width, self.tabPage.view.frame.size.height);
 	[super render:arguments container: parent elements: elements];
 	return self;
 }
