@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "iBaseControl.h"
+@class Array;
 
 
 @interface iTabSet : iBaseControl {
@@ -16,5 +17,5 @@
 
 @property (retain) UITabBarController* tabController;
 
--(void) initializeTabPages: (NSArray*) tabPages;
+-(void) initializeTabPages: (Array*) tabPages;
 @end

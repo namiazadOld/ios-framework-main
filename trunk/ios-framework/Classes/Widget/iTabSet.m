@@ -12,6 +12,7 @@
 #import "iCustomControl.h"
 #import "Utilities.h"
 #import "StylingManager.h"
+#import "Array.h"
 
 
 @implementation iTabSet
@@ -24,12 +25,12 @@
 	return self;
 }
 
--(void) initializeTabPages: (NSArray*) tabPages
+-(void) initializeTabPages: (Array*) tabPages
 {
 	NSMutableArray* actualPages = [[NSMutableArray alloc] init];
-	for (BindableObject* bo in tabPages)
+	for (Tuple3* tuple in tabPages.data)
 	{
-		Tuple3* tuple = (Tuple3*)bo.value;
+
 		iTabPage* tabPage = [[iTabPage alloc] render:[[NSMutableArray alloc] initWithObjects:tuple._1, tuple._2, nil] container:self elements:NULL];
 		
 		iCustomControl* content = [(iCustomControl*)tuple._3.value render:[[NSMutableArray alloc] init] container:tabPage elements:NULL];
@@ -49,7 +50,7 @@
 	switch (index) {
 		case 0:
 		{
-			[self initializeTabPages:(NSArray*)bo.value];
+			[self initializeTabPages:(Array*)bo.value];
 			break;
 		}
 		case 1:

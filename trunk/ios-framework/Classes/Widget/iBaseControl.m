@@ -249,17 +249,17 @@
 
 -(void)show
 {
-	if (self.isWhen && !self.isRendered)
-	{
-		[self.scope createInnerScope];
-		[self render:self.args container:self.parentCache elements:self.elements];
-		[self finilize];
-		[self.parentCache addBodyControl:self];
-		[self.scope exitScope];	
-		
-		[self.parentCache.children removeObject:self];
-		[self.parentCache.children insertObject:self atIndex:self.index];
-	}
+	//if (self.isWhen && !self.isRendered)
+//	{
+//		[self.scope createInnerScope];
+//		[self render:self.args container:self.parentCache elements:self.elements];
+//		[self finilize];
+//		[self.parentCache addBodyControl:self];
+//		[self.scope exitScope];	
+//		
+//		[self.parentCache.children removeObject:self];
+//		[self.parentCache.children insertObject:self atIndex:self.index];
+//	}
 	self.visible = YES;
 	if (!parentWidget.visible)
 		return;
