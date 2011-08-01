@@ -9,6 +9,7 @@
 
 #import "BindableObject.h"
 #import "NSObject+mobl.h"
+#import "NSString+mobl.h"
 #import "Generic.h"
 @class Collection;
 

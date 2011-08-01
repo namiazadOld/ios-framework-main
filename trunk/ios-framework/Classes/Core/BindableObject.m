@@ -11,7 +11,7 @@
 
 
 @implementation BindableObject
-@synthesize value, listeners, evaluator, removeFromListener;
+@synthesize value = _bv, listeners, evaluator, removeFromListener;
 
 -(void) initFields
 {
@@ -20,10 +20,10 @@
 }
 
 
--(BindableObject*) initializeWithValue: (id) _value
+-(BindableObject*) initializeWithValue: (NSObject*) _value
 {
 	[self initFields];
-	self.value = _value;
+	[self setValue:_value];
 	return self;
 }
 
@@ -47,14 +47,19 @@
 		[control changeNotification:self];
 }
 
--(void) setValue:(id)_value
+-(NSObject*) value
+{
+	return _bv;
+}
+
+-(void) setValue:(NSObject *)v
 {
 	@synchronized(self)
 	{
 		[self initFields];
-		if (value != NULL && _value != NULL && [_value isKindOfClass:[iBaseControl class]])
-			[iBaseControl ChangeControl:(iBaseControl*)value to:(iBaseControl*)_value];
-		value = _value;
+		if (_bv != NULL && v != NULL && [v isKindOfClass:[iBaseControl class]])
+			[iBaseControl ChangeControl:(iBaseControl*)_bv to:(iBaseControl*)v];
+		_bv = v;
 		[self notifyListeners];
 	}
 }

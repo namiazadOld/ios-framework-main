@@ -44,7 +44,7 @@
 		return nil;
 	
 	if ([prop.value isKindOfClass:[DateTime class]])
-		return [prop.value date];
+		return [prop.value _date];
 	
 	return prop.value;
 }
@@ -68,6 +68,13 @@
 		DateTime* dt = [[DateTime alloc] init];
 		dt._date = attr;
 		return dt;
+	}
+	
+	if ([attr isKindOfClass:[NSString class]])
+	{
+		//APPLE I WANT TO FUCK YOU! THIS CODE TOOK ME 5 HOURS.
+		NSString* str = (NSString*)attr;
+		return [[NSString alloc] initWithString:str];
 	}
 	
 	return attr;

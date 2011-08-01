@@ -21,6 +21,11 @@ static Scope* instance;
 	return instance;
 }
 
++(void) setInstance:(Scope*)_scope
+{
+	instance = _scope;
+}
+
 +(void) initialize
 {
 	//nice usage of static variables
@@ -34,17 +39,18 @@ static Scope* instance;
 
 -(Scope*) init
 {
-	self.parent = nil;
-	self.variables = [[NSMutableDictionary alloc] init];
+	parent = nil;
+	variables = [[NSMutableDictionary alloc] init];
+	//variables = [NSMutableDictionary dictionaryWithCapacity:0];
 	return self;
 }
 
--(void) assign: (NSString*)key value: (id) value
+-(void) assign: (NSString*)key value: (NSObject*) _value
 {
 	BindableObject* b = (BindableObject*)[self get:key];
 	
 	if (b != nil)
-		b.value = value;
+		b.value = _value;
 }
 
 -(void) set: (NSString*)key variable: (NSObject*) variable
@@ -67,7 +73,7 @@ static Scope* instance;
 {
 	Scope* innerScope = [[Scope alloc] init];
 	innerScope.parent = self;
-	instance = innerScope;
+	[Scope setInstance:innerScope];
 }
 
 -(void) exitScope
@@ -75,5 +81,6 @@ static Scope* instance;
 	instance = self.parent;
 	//[self release];
 }
+
 
 @end

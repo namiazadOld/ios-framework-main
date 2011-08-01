@@ -24,6 +24,7 @@
 #import "DateTime.h"
 #import "String.h"
 #import "Function1.h"
+#import "NSObject+mobl.h"
 
 @interface root : iView{
 	UIWindow *window;

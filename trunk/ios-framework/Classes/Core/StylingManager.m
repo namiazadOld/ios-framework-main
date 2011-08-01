@@ -223,7 +223,8 @@ static BOOL _ordered;
 
 +(void) orderWidgets: (iBaseControl*)container
 {
-	container.lastInnerControl = [[iEmptyWidget alloc] init];
+	iEmptyWidget* emp = [[iEmptyWidget alloc] init];
+	container.lastInnerControl = emp;
 	NSMutableArray* flattenChildren = [container getFlattenChildren];
 	for (iBaseControl* child in flattenChildren)
 	{
@@ -241,6 +242,8 @@ static BOOL _ordered;
 		[StylingManager setOrdered:YES];
 	}
 	[flattenChildren release];
+	container.lastInnerControl = nil;
+	[emp release];
 }
 
 @end
