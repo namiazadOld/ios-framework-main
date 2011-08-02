@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "iBaseControl.h"
+#import "baseControl.h"
 #import "Constants.h"
 
 
@@ -15,9 +15,9 @@
 	
 }
 
-+(CGRect) styleRectangle: (iBaseControl*)control container:(iBaseControl*)parent;
-+(void) regenerateLineNos: (iBaseControl*) container;
-+(void) orderWidgets: (iBaseControl*)container;
++(CGRect) styleRectangle: (baseControl*)control container:(baseControl*)parent;
++(void) regenerateLineNos: (baseControl*) container;
++(void) orderWidgets: (baseControl*)container;
 +(BOOL) ordered;
 
 @end

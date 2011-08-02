@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BindableObject.h"
-#import "iBaseControl.h"
+#import "baseControl.h"
 
 
 @interface Utilities : NSObject {
@@ -16,7 +16,7 @@
 }
 
 +(void) ShowError: (id)sender title: (NSString*)title content: (NSString*)content;
-+(void) AddControl:(iBaseControl*) widget ToContainer: (iBaseControl*) container;
++(void) AddControl:(baseControl*) widget ToContainer: (baseControl*) container;
 //+(BindableObject*) InitWithType: (TypedValue*) tv;
 +(id) Tuple: (NSArray*)values;
 +(NSString*) StringWithUUID;

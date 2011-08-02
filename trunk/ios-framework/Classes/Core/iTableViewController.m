@@ -7,8 +7,8 @@
 //
 
 #import "iTableViewController.h"
-#import "iSection.h"
-#import "iItem.h"
+#import "section.h"
+#import "item.h"
 #import "NullObject.h"
 
 
@@ -23,11 +23,11 @@
 #pragma mark View lifecycle
 
 
--(iSection*) getSection: (int) index
+-(section*) getSection: (int) index
 {
 	int actualIndex = -1;
 	
-	for (iSection* section in self.sectionList)
+	for (section* section in self.sectionList)
 	{
 		if (section.visible)
 			actualIndex++;
@@ -42,17 +42,17 @@
 -(int) sectionCount
 {
 	int count = 0;
-	for (iSection* section in self.sectionList)
+	for (section* section in self.sectionList)
 		if (section.visible)
 			count++;
  	return count;
 }
 
--(iItem*) getItem:(iSection*) section at: (int) index
+-(item*) getItem:(section*) section at: (int) index
 {
 	int actualIndex = -1;
 	
-	for (iItem* item in [section itemList])
+	for (item* item in [section itemList])
 	{
 		if (item.visible)
 			actualIndex++;
@@ -64,10 +64,10 @@
 	return nil;
 }
 
--(int) itemCount: (iSection*) section
+-(int) itemCount: (section*) section
 {
 	int count = 0;
-	for (iItem* item in [section itemList])
+	for (item* item in [section itemList])
 		if (item.visible)
 			count++;
  	return count;
@@ -92,7 +92,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   
 	
-	iItem* item = [self getItem:[self getSection:indexPath.section] at:indexPath.row];
+	item* item = [self getItem:[self getSection:indexPath.section] at:indexPath.row];
 	//iItem* item = [[[self.sectionList objectAtIndex:indexPath.section] itemList] objectAtIndex:indexPath.row];
 	
 	// Configure the cell...
@@ -105,7 +105,7 @@
 }
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    iItem* item = [self getItem:[self getSection:indexPath.section] at:indexPath.row];
+    item* item = [self getItem:[self getSection:indexPath.section] at:indexPath.row];
 	
 	if (item.onClick != NULL && ![item.onClick isKindOfClass:[NullObject class]])
 		[item.onClick.target performSelector:item.onClick.method];
