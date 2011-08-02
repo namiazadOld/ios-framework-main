@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "iCustomControl.h"
+#import "customControl.h"
 
 
 @interface UIUtil : NSObject {
@@ -15,6 +15,6 @@
 }
 
 +(void) message: (NSString*) content arg: (NSString*) title;
-+(void) dialog: (iCustomControl*) content;
++(void) dialog: (customControl*) content;
 
 @end

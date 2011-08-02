@@ -7,7 +7,7 @@
 //
 
 #import "BindableObject.h"
-#import "iBaseControl.h"
+#import "baseControl.h"
 
 
 @implementation BindableObject
@@ -57,8 +57,8 @@
 	@synchronized(self)
 	{
 		[self initFields];
-		if (_bv != NULL && v != NULL && [v isKindOfClass:[iBaseControl class]])
-			[iBaseControl ChangeControl:(iBaseControl*)_bv to:(iBaseControl*)v];
+		if (_bv != NULL && v != NULL && [v isKindOfClass:[baseControl class]])
+			[baseControl ChangeControl:(baseControl*)_bv to:(baseControl*)v];
 		_bv = v;
 		[self notifyListeners];
 	}

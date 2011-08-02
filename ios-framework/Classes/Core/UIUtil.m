@@ -8,7 +8,7 @@
 
 #import "UIUtil.h"
 #import "Utilities.h"
-#import "iView.h"
+#import "widgetHolder.h"
 #import "StylingManager.h"
 
 
@@ -19,9 +19,9 @@
 	[Utilities ShowError:self title:title content:content];
 }
 
-+(void) dialog: (iCustomControl*) content
++(void) dialog: (customControl*) content
 {
-	iView* modalView = [[iView alloc] init];
+	widgetHolder* modalView = [[widgetHolder alloc] init];
 	
 	[modalView render:[[NSMutableArray alloc] init] container:NULL elements:NULL];
 	[modalView finilize];

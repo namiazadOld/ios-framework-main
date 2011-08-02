@@ -7,8 +7,9 @@
 //
 
 #import "StylingManager.h"
-#import "iEmptyWidget.h"
-#import "iWhen.h"
+#import "empty.h"
+#import "when.h"
+#import "navBar.h"
 
 
 @implementation StylingManager
@@ -25,12 +26,12 @@ static BOOL _ordered;
 	_ordered = aBool;
 }
 
-+(float) getLeftAnchorStartingX: (float) lineY control:(iBaseControl*)control container: (iBaseControl*)parent
++(float) getLeftAnchorStartingX: (float) lineY control:(baseControl*)control container: (baseControl*)parent
 {
 	float x = 0.0;
 	
 	NSMutableArray* flattenChildren = [parent getFlattenChildren];
-	for (iBaseControl* subView in flattenChildren)
+	for (baseControl* subView in flattenChildren)
 	{
 		if ([subView isEqual:control])
 			continue;
@@ -51,14 +52,14 @@ static BOOL _ordered;
 	return x + control.marginLeft;
 }
 
-+(float)getRightAnchorEndingX: (float) lineY control:(iBaseControl*)control container: (iBaseControl*)parent
++(float)getRightAnchorEndingX: (float) lineY control:(baseControl*)control container: (baseControl*)parent
 {
 	CGRect parentFrame = [parent getFrame];
 	
 	float x = parentFrame.size.width;
 	
 	NSMutableArray* flattenChildren = [parent getFlattenChildren];
-	for (iBaseControl* subView in flattenChildren)
+	for (baseControl* subView in flattenChildren)
 	{
 		if ([subView isEqual:control])
 			continue;
@@ -79,7 +80,7 @@ static BOOL _ordered;
 	return x - control.marginRight;
 }
 
-+(float) calculateRawY:(iBaseControl*) control lastControl:(iBaseControl*)lastControl container:(iBaseControl*)parent
++(float) calculateRawY:(baseControl*) control lastControl:(baseControl*)lastControl container:(baseControl*)parent
 {
 	CGRect lastControlFrame = [lastControl getFrame];
 	
@@ -88,7 +89,7 @@ static BOOL _ordered;
 	{
 		float maxHeightOfLastLine = lastControlFrame.origin.y + lastControlFrame.size.height + lastControl.marginBottom;
 		NSMutableArray* flattenChildren = [parent getFlattenChildren];
-		for (iBaseControl* subView in flattenChildren)
+		for (baseControl* subView in flattenChildren)
 		{
 			if (subView.lineNo != lastControl.lineNo)
 				continue;
@@ -108,7 +109,7 @@ static BOOL _ordered;
 	
 }
 
-+(float) calculateX:(iBaseControl*)control lastControl:(iBaseControl*)lastControl container:(iBaseControl*)parent
++(float) calculateX:(baseControl*)control lastControl:(baseControl*)lastControl container:(baseControl*)parent
 {
 	CGRect lastControlFrame = [lastControl getFrame];
 	
@@ -137,7 +138,7 @@ static BOOL _ordered;
 }
 
 
-+(float) calculateY:(iBaseControl*) control lastControl:(iBaseControl*)lastControl container:(iBaseControl*)parent
++(float) calculateY:(baseControl*) control lastControl:(baseControl*)lastControl container:(baseControl*)parent
 {
 	CGRect lastControlFrame = [lastControl getFrame];
 	
@@ -147,7 +148,7 @@ static BOOL _ordered;
 	return y + control.marginTop;
 }
 
-+(float) calculateWidth: (iBaseControl*)control container:(iBaseControl*)parent startingX:(float)startingX startingY:(float)startingY
++(float) calculateWidth: (baseControl*)control container:(baseControl*)parent startingX:(float)startingX startingY:(float)startingY
 {
 	if (control.anchor != LeftRight)
 		return control.initialFrame.size.width;
@@ -157,12 +158,12 @@ static BOOL _ordered;
 	return endingX - startingX;
 }
 
-+(float) calculateHeight: (iBaseControl*) control
++(float) calculateHeight: (baseControl*) control
 {
 	float lowestY = 0.0;
 	
 	NSMutableArray* flattenChildren = [control getFlattenChildren];
-	for (iBaseControl* child in flattenChildren)
+	for (baseControl* child in flattenChildren)
 	{
 		if (!child.visible)
 			continue;
@@ -176,9 +177,9 @@ static BOOL _ordered;
 	return lowestY;
 }
 									
-+(CGRect) styleRectangle: (iBaseControl*)control container:(iBaseControl*)parent
++(CGRect) styleRectangle: (baseControl*)control container:(baseControl*)parent
 {
-	iBaseControl* lastControl = parent.lastInnerControl;
+	baseControl* lastControl = parent.lastInnerControl;
 	
 	float x = control.initialFrame.origin.x;
 	float y = control.initialFrame.origin.y;
@@ -204,13 +205,13 @@ static BOOL _ordered;
 	return CGRectMake(x, y, width, height);
 }
 
-+(void) regenerateLineNos: (iBaseControl*) container
++(void) regenerateLineNos: (baseControl*) container
 {
 	NSMutableArray* flattenChildren = [container getFlattenChildren];
 	
 	int lineNo = 0;
 	
-	for (iBaseControl* child in flattenChildren)
+	for (baseControl* child in flattenChildren)
 	{
 		if (child.place == NextLine)
 			child.lineNo = ++lineNo;
@@ -221,19 +222,25 @@ static BOOL _ordered;
 	}
 }
 
-+(void) orderWidgets: (iBaseControl*)container
++(void) orderWidgets: (baseControl*)container
 {
-	iEmptyWidget* emp = [[iEmptyWidget alloc] init];
+	empty* emp = [[empty alloc] init];
 	container.lastInnerControl = emp;
 	NSMutableArray* flattenChildren = [container getFlattenChildren];
-	for (iBaseControl* child in flattenChildren)
-		[child setFrame:CGRectMake(0, 0, 0, 0)];
-	for (iBaseControl* child in flattenChildren)
+	
+	for (baseControl* child in container.children)
+	{
+		CGRect f = [child getFrame];
+		[child setFrame:CGRectMake(0, f.origin.y, f.size.width, f.size.height)];
+	}
+	
+	for (baseControl* child in flattenChildren)
 	{
 		if (!child.visible)
 			continue;
+		CGRect f0 = [child getFrame];
 		[child setFrame:[self styleRectangle:child container:container]];
-		CGRect f = [child getFrame];
+		CGRect f1 = [child getFrame];
 		container.lastInnerControl = child;
 		[StylingManager orderWidgets:child];
 		

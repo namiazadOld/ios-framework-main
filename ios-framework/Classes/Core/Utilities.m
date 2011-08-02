@@ -7,14 +7,14 @@
 //
 
 #import "Utilities.h"
-#import "iBaseControl.h"
+#import "baseControl.h"
 #import "Constants.h"
 #import "Tuple1.h"
 #import "Tuple2.h"
 #import "Tuple3.h"
 #import "Tuple4.h"
 #import "Tuple5.h"
-#import "iCustomControl.h"
+#import "customControl.h"
 
 
 @implementation Utilities
@@ -36,7 +36,7 @@ static NSManagedObjectContext* managedObjectContext;
 
 }
 
-+(void) AddControl:(iBaseControl*) widget ToContainer: (iBaseControl*) container
++(void) AddControl:(baseControl*) widget ToContainer: (baseControl*) container
 {
 
 	
